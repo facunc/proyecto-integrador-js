@@ -5,25 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-    <script src="/vendor/js/bootstrap.bundle.min.js"></script>
-    <script src="/vendor/js/bootstrap.min.js"></script>
+    <script defer src="/vendor/js/bootstrap.bundle.min.js"></script>
+    <script defer src="/vendor/js/bootstrap.min.js"></script>
     <script src="/vendor/js/handlebars.min.js"></script>
+    <script defer src="/vendor/js/codigo.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <h1>Tienda</h1>
-    </header>
 
+<header>
+    <h1>
+        Tienda
+    </h1>
+    <form action="" class="search-form">
+        <input type="search"> <button>Buscar</button>
+    </form> 
+</header>
+<body>
     <main>
-         <nav>Buscar</nav>
-        <p>Ordenar por...</p>
-        <div>
-            <a href="/articulo.html">
-                <img src="" alt="">
-                <article>article</article>
-            </a>
-        </div> 
+        <script type="text/x-handlebars" id="index">
+            <div class="article">
+                <div class="article-image">
+                    <img class="image" src="{{urlImagen}}" alt="Imágenes al azar de la web">
+                </div>
+                <div>
+                    <p class="article-title">
+                        {{nombre}}
+                    </p>
+                    <p class="article-price">
+                        {{precio}}
+                    </p>
+                </div>
+            </div>
+        </script>
     </main>
     
 </body>
