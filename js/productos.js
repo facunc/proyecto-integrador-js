@@ -70,19 +70,3 @@ const productos = [
         "id": "14"
     }
 ]
-
-const index = document.querySelector('#index').innerHTML;
-const paginaIndex = document.querySelector('main');
-
-console.log(index)
-
-const functionIndex = Handlebars.compile(index);
-
-productos.forEach(producto => {
-    let templateIndex = functionIndex(producto);
-    paginaIndex.innerHTML += templateIndex;
-});
-
-
-
-

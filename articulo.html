@@ -8,6 +8,8 @@
     <script src="/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="/vendor/js/bootstrap.min.js"></script>
     <script src="/vendor/js/handlebars.min.js"></script>
+    <script defer src="/js/articulo.js" type="module"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,18 +20,20 @@
     </header>
     
     <main>
-        <div>
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="">
-        </div>
-        <article>
-            <h2>
-                Articulo
-            </h2>
-            <p>
-                <h3>Descripción del producto</h3>
-            </p>
-        </article>
-        <a href="carrito.html">&#43</a>
+        <script type="text/x-handlebars" id="articulo">
+            <div class="image">
+                <img  class="image" src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="">
+            </div>
+            <article class="article-title">
+                <h2>
+                    {{nombre}}
+                </h2>
+                <h3 class="article-description">
+                    {{descripcion}}
+                </h3>
+            </article>
+            <a href="carrito.html" id="add-to-cart">&#43</a>
+        </script>
     </main>
     
 </body>

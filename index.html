@@ -8,7 +8,8 @@
     <script defer src="/vendor/js/bootstrap.bundle.min.js"></script>
     <script defer src="/vendor/js/bootstrap.min.js"></script>
     <script src="/vendor/js/handlebars.min.js"></script>
-    <script defer src="/vendor/js/codigo.js"></script>
+    <script src="/js/productos.js"></script>
+    <script defer src="/js/index.js" type="module"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
@@ -18,7 +19,7 @@
         Tienda
     </h1>
     <form action="" class="search-form">
-        <input type="search"> <button>Buscar</button>
+        <input placeholder="Buscar" type="search">
     </form> 
 </header>
 <body>
@@ -26,16 +27,19 @@
         <script type="text/x-handlebars" id="index">
             <div class="article">
                 <div class="article-image">
-                    <img class="image" src="{{urlImagen}}" alt="Imágenes al azar de la web">
+                    <img class='image' src="{{urlImagen}}" alt="Imagen de la web al azar">
                 </div>
-                <div>
-                    <p class="article-title">
-                        {{nombre}}
-                    </p>
-                    <p class="article-price">
-                        {{precio}}
-                    </p>
-                </div>
+
+                <a href="articulo.html" id="{{id}}">
+                    <div class="article-text">
+                        <p class="article-title">
+                            {{nombre}} 
+                        </p>
+                        <p class="article-price">
+                            {{precio}}
+                        </p>
+                    </div>
+                </a>
             </div>
         </script>
     </main>
