@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-    <script src="/vendor/js/bootstrap.bundle.min.js"></script>
-    <script src="/vendor/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/vendor/js/bootstrap.bundle.min.js"></script>
+    <script defer src="/vendor/js/bootstrap.min.js"></script>
     <script src="/vendor/js/handlebars.min.js"></script>
+    <script src="/js/productos.js" ></script>
+    <script defer src="/js/carrito.js" ></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,20 +19,30 @@
             Tienda
         </h1>
     </header>
-    <main>
-        <div>
-            <div>
-                <h3>Nombre del articulo</h3>
-            </div>
-            <div>
+    <main id="'main">
+        <script type="text/x-handlebars" id="carrito">
+            <div class="subtotal">
                 <h3>
-                    < >
-                </h3>
-            </div>
+                    {{nombre}}
+                </h3>     
+                <div class='buttons' id={{id}}>
+                    <h3>
+                        <button class="quitar">
+                            <
+                        </button>
+                                <span class="numero">{{cantidad}}</span>
+                        <button class="agregar">
+                            >
+                        </button>
+                    </h3>
+                </div>
+            </div> 
+        </script>
+        <script type="text/x-handlebars" id="precio-total">
             <div>
-                <h3>Total: </h3>
+                <h3>Total: {{precioTotal}}</h3>
             </div>
-        </div>
+        </script>
     </main>
     
 </body>

@@ -24,24 +24,23 @@
 </header>
 <body>
     <main>
-        <script type="text/x-handlebars" id="index">
-            <div class="article">
-                <div class="article-image">
-                    <img class='image' src="{{urlImagen}}" alt="Imagen de la web al azar">
-                </div>
-
-                <a href="articulo.html" id="{{id}}">
-                    <div class="article-text">
-                        <p class="article-title">
-                            {{nombre}} 
-                        </p>
-                        <p class="article-price">
-                            {{precio}}
-                        </p>
+        <script type="text/x-handlebars" id="index">    
+                <div class="article">
+                    <div class="article-image">
+                        <img class='image' src="{{urlImagen}}" alt="Imagen de la web al azar">
                     </div>
-                </a>
-            </div>
-        </script>
+                    <a href="articulo.html" class="link-articulo" id="{{id}}">
+                        <div class="article-text">
+                            <p class="article-title">
+                                {{nombre}} 
+                            </p>
+                            <p class="article-price">
+                                {{precio}}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </script>
     </main>
     
 </body>
