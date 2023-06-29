@@ -69,7 +69,12 @@ const buscarProducto = (carrito, id) =>{
 }
 
 const quitarProducto = (carritoDeArticulos, producto) => {
+    const id = producto.id
+    const elementoHTML = document.getElementById(id)
+
     carritoDeArticulos = carritoDeArticulos.filter(articulo => articulo != producto)
+    elementoHTML.parentElement.remove()
+
     console.log(carritoDeArticulos)
     return carritoDeArticulos
 }
